@@ -4,18 +4,18 @@ import os
 from multiprocessing import Pool
 
 
-def call_madeira():
+def call_madeira() -> None:
+    """Chamar Funções """
     from madeira import MadeiraMadeira
     madeira =  MadeiraMadeira()
     madeira.get_produtos()
     madeira.compara_precos()
 
-def call_google():
+def call_google() -> None:
+    """Chamar Funções """
     from google import GoogleShopping
 
     google = GoogleShopping()
-
-
     google.get_produtos()
     google.compara_precos()
 

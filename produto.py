@@ -30,17 +30,17 @@ class Produto(ABC):
         self.get_produtos()
         self.compara_precos()
 
-    def hook_after(self): pass
+    def hook_after(self)-> None: pass
 
-    def hook_before(self): pass
+    def hook_before(self) -> None: pass
 
-    def get(self): pass
-
-    @abstractmethod
-    def get_produtos(self): pass
+    def get(self) -> None: pass
 
     @abstractmethod
-    def compara_precos(self): pass
+    def get_produtos(self) -> None: pass
+
+    @abstractmethod
+    def compara_precos(self) -> None: pass
 
 
 

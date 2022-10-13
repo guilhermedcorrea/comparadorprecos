@@ -5,13 +5,13 @@ import random
 from selenium.webdriver.common.by import By
 
 
-def get_random():
+def get_random() -> list:
     num2 = random.randint(1, 6)
     yield num2
 
 
 class MadeiraMadeira(Produto):
-    def hook_after(self):
+    def hook_after(self)-> list:
         lista_urls = []
         data = pd.read_excel(r'/home/debian/Documentos/comparador/databases/madeirateste.xlsx')
         for i, row in data.iterrows():
@@ -20,7 +20,7 @@ class MadeiraMadeira(Produto):
         return lista_urls
 
        
-    def get_produtos(self):
+    def get_produtos(self) -> None:
         urls = self.hook_after()
         for url in urls:
             self.driver.get(url)
@@ -47,7 +47,7 @@ class MadeiraMadeira(Produto):
             except:
                 pass
 
-    def compara_precos(self):
+    def compara_precos(self) -> None:
         for i in range(10):
             print("comparando preco Madeira")
 
