@@ -25,7 +25,7 @@ def inicia_programa(nome_arquivo):
     
 if __name__ == "__main__":
 
-    arquivos = [call_madeira()]
+    arquivos = [call_madeira(), call_google()]
 
     processos = []
     for arquivo in arquivos:
